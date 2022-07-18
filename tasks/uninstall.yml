@@ -1,0 +1,5 @@
+---
+- name: Remove helm binary
+  file:
+    path: "{{ helm_bin_path }}"
+    state: absent

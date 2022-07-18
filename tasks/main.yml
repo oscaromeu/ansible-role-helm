@@ -1,0 +1,10 @@
+---
+- name: Install Helm
+  include_tasks: install.yml
+  when: not uninstall
+  tags: helm
+
+- name: Uninstall Helm
+  include_tasks: uninstall.yml
+  when: uninstall
+  tags: helm
