@@ -66,21 +66,41 @@ ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml --ask-be
 
 ### Execute test with molecule
 
+#### Run test sequence commands
+
+Run molecule to create an instance with:
 
 ```
-molecule create -s default
+$ molecule create -s default
 ```
 
-```
-molecule converge -s default --
-```
+Test the role against our instances with:
 
 ```
-molecule verify
+$ molecule converge -s default --
 ```
 
+Verify that the role pass the test:
 
-Note: Getting colorized output from molecule and Ansible
+```
+$ molecule verify
+```
+
+Finally, we can destroy the instances with:
+
+```
+$ molecule destroy
+```
+
+#### Run a full test sequence
+
+The full lifecycle sequence can be invoked with:
+
+```
+$ molecule test
+```
+
+__Note:__ Getting colorized output from molecule and Ansible
 
 ```
 export ANSIBLE_FORCE_COLOR=1
