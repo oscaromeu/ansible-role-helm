@@ -1,6 +1,6 @@
 # Ansible Role Helm
 
-[![CI](https://github.com/oscaromeu/ansible-role-k8s-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/oscaromeu/ansible-role-k8s-tools/actions/workflows/ci.yml)
+[![CI](https://github.com/oscaromeu/ansible-role-helm/actions/workflows/ci.yml/badge.svg)](https://github.com/oscaromeu/ansible-role-helm/actions/workflows/ci.yml)
 
 This role manages the installation of [Helm](https://helm.sh)
 
@@ -66,6 +66,7 @@ ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml --ask-be
 
 ### Execute test with molecule
 
+
 ```
 molecule create -s default
 ```
@@ -74,7 +75,16 @@ molecule create -s default
 molecule converge -s default --
 ```
 
+```
+molecule verify
+```
 
+
+Note: Getting colorized output from molecule and Ansible
+
+```
+export ANSIBLE_FORCE_COLOR=1
+```
 ## License
 
 MIT / BSD
