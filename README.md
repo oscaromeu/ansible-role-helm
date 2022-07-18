@@ -22,7 +22,7 @@ Available variables are listed below, along with default values (see `defaults/m
 uninstall: false
 ```
 
-If set to true it will only remove the installed cli's. 
+If set to true it will only remove the installed cli. 
 
 ```yml
 helm_platform: linux
